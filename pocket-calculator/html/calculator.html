@@ -5,11 +5,29 @@
   <title> Calculator </title>
 
   <link rel="stylesheet" type="text/css" href="css/pocket.css"/>
+
   <script type="text/javascript" src="js/pCalculator.js"></script>
 
 </head>
 
 <body>
+
+<div>
+<p id = "display">
+
+</p>
+</div>
+
+<style>
+  button{
+  height: 5em;
+  width: 5em;
+  }
+
+  .zero{
+    width: 10.3em;
+  }
+</style>
 
   <button onclick = "clear();"> AC </button>
   <button onclick = "negation();"> +/- </button>
@@ -31,7 +49,8 @@
   <button onclick = "three();"> 3 </button>
   <button onclick = "addition();"> + </button>
 <br/>
-  <button onclick = "zero();"> 0 </button>
+
+  <button onclick = "zero();" class = "zero"> 0 </button>
   <button onclick = "decimal();"> . </button>
   <button onclick = "equals();"> = </button>
 
