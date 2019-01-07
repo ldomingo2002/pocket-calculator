@@ -6,11 +6,133 @@
 
   <link rel="stylesheet" type="text/css" href="css/pocket.css"/>
 
-  <script type="text/javascript" src="js/pCalculator.js"></script>
+  <script type="text/javascript" src="java/pCalculator.js"></script>
 
 </head>
 
 <body>
+
+<style>
+  button{
+  height: 5em;
+  width: 5em;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 1px 1px #777777;
+  margin: 3px 3px 3px 3px;
+  }
+
+  button:hover{
+    background-color: pink;
+  }
+
+  .zero{
+    width: 10.8em;
+  }
+
+  .calc{
+  margin-left: 450px;
+  margin-right: 200px;
+  margin-top: 0.5em
+  }
+
+  p{
+  height: 55px;
+  width: 285px;
+  padding-right: 15px;
+  padding-top: 15px;
+  margin-left: 450px;
+  margin-right: 200px;
+  margin-top: 160px;
+  border-style: solid;
+  border-color: black;
+  font-size: 35px;
+  text-align: right;
+
+  }
+
+
+</style>
+
+
+<script>
+
+function clear(){
+let p = document.getElementById('display').innerHTML = " ";
+
+}
+
+function negation(){
+}
+
+function percentage(){
+}
+
+function division(){
+  let p = document.getElementById('display').innerHTML = "/"
+}
+
+function seven(){
+  let p = document.getElementById('display').innerHTML = "7";
+
+}
+
+function eight(){
+    let p = document.getElementById('display').innerHTML = "8";
+}
+
+function nine(){
+    let p = document.getElementById('display').innerHTML = "9";
+}
+
+function multiplication(){
+  let p = document.getElementById('display').innerHTML = "x"
+}
+
+function four(){
+  let p = document.getElementById('display').innerHTML = "4";
+}
+
+function five(){
+    let p = document.getElementById('display').innerHTML = "5";
+}
+
+function six(){
+    let p = document.getElementById('display').innerHTML = "6";
+}
+
+function subtraction(){
+  let p = document.getElementById('display').innerHTML = "-"
+}
+
+function one(){
+    let p = document.getElementById('display').innerHTML = "1";
+}
+
+function two(){
+    let p = document.getElementById('display').innerHTML = "2";
+}
+
+function three(){
+    let p = document.getElementById('display').innerHTML = "3";
+}
+
+function addition(){
+  let p = document.getElementById('display').innerHTML = "+"
+}
+
+function zero(){
+    let p = document.getElementById('display').innerHTML = "0";
+}
+
+function decimal(){
+  let p = document.getElementById('display').innerHTML = "."
+}
+
+function equals(){
+  let p = document.getElementById('display').innerHTML = "="
+}
+</script>
+
 
 <div>
 <p id = "display">
@@ -18,17 +140,7 @@
 </p>
 </div>
 
-<style>
-  button{
-  height: 5em;
-  width: 5em;
-  }
-
-  .zero{
-    width: 10.3em;
-  }
-</style>
-
+<div class = "calc">
   <button onclick = "clear();"> AC </button>
   <button onclick = "negation();"> +/- </button>
   <button onclick = "percentage();"> % </button>
@@ -53,6 +165,7 @@
   <button onclick = "zero();" class = "zero"> 0 </button>
   <button onclick = "decimal();"> . </button>
   <button onclick = "equals();"> = </button>
+</div>
 
   </body>
 </html>
