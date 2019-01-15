@@ -4,55 +4,98 @@
 <head>
   <title> Calculator </title>
 
-  <link rel="stylesheet" type="text/css" href="css/pocket.css"/>
+  <link rel="stylesheet" type="text/css" href="pocket.css">
 
-  <script type="text/javascript" src="js/pCalculator.js"></script>
+  <script type="text/javascript" src="calc.js"></script>
 
 </head>
 
 <body>
 
-<div>
-<p id = "display">
-
-</p>
-</div>
-
 <style>
-  button{
+button{
+height: 5em;
+width: 5em;
+border-radius: 5px;
+margin: 3px 3px 3px 3px;
+}
+
+button:hover{
+
+  -webkit-box-shadow: 3px 3px 6px 1px #777777;
+}
+
+
+.num{
   height: 5em;
   width: 5em;
-  }
+  border-radius: 5px;
+  margin: 3px 3px 3px 3px;
+}
+.zero{
+  width: 10.8em
+}
 
-  .zero{
-    width: 10.3em;
-  }
+.calc{
+margin: auto;
+border-style: solid;
+width: 310px;
+}
+
+
+#display{
+  height: 70px;
+  width: 285px;
+  padding-right: 15px;
+  padding-top: 15px;
+  text-align: right;
+  font-size: 34px;
+
+}
 </style>
 
-  <button onclick = "clear();"> AC </button>
-  <button onclick = "negation();"> +/- </button>
-  <button onclick = "percentage();"> % </button>
-  <button onclick = "division();"> / </button>
-<br/>
-  <button onclick = "seven();"> 7 </button>
-  <button onclick = "eight();"> 8 </button>
-  <button onclick = "nine();"> 9 </button>
-  <button onclick = "multiplication();"> x </button>
-<br/>
-  <button onclick = "four();"> 4 </button>
-  <button onclick = "five();"> 5 </button>
-  <button onclick = "six();"> 6 </button>
-  <button onclick = "subtraction();"> - </button>
-<br/>
-  <button onclick = "one();"> 1 </button>
-  <button onclick = "two();"> 2 </button>
-  <button onclick = "three();"> 3 </button>
-  <button onclick = "addition();"> + </button>
-<br/>
+<form class = "calc">
+<table>
+<tbody>
+  <tr>
+    <td colspan = "4"> <input id = "display" type ="text" value = "0" > </input> </td>
 
-  <button onclick = "zero();" class = "zero"> 0 </button>
-  <button onclick = "decimal();"> . </button>
-  <button onclick = "equals();"> = </button>
+    <tr>
+    <td> <button onclick = "ac();"> AC </button> </td>
+    <td> <button onclick = "negation();"> +/- </button> </td>
+    <td> <button onclick = "percentage();"> % </button> </td>
+    <td> <input class = "num" type = "button" onclick = "/" value = "/" > </input> </td>
+    </tr>
 
+    <tr>
+    <td> <input  class = "num" type = "button" onclick = "7" value = 7> </input> </td>
+    <td> <input  class = "num" type = "button" onclick = "8" value = 8> </input> </td>
+    <td> <input  class = "num" type = "button" onclick = "9" value = 9> </input> </td>
+    <td> <input  class = "num" type = "button" onclick = "x" value = x> </input> </td>
+    </tr>
+
+    <tr>
+    <td> <input  class = "num" type = "button" onclick = "4" value = 4> </input>  </td>
+    <td> <button onclick = "five();"> 5 </button> </td>
+    <td> <button onclick = "six();"> 6 </button> </td>
+    <td> <button onclick = "subtraction();"> - </button> </td>
+    </tr>
+
+    <tr>
+    <td> <button onclick = "one();"> 1 </button> </td>
+    <td> <button onclick = "two();"> 2 </button> </td>
+    <td> <button onclick = "three();"> 3 </button> </td>
+    <td> <button onclick = "addition();"> + </button> </td>
+    </tr>
+
+    <tr>
+    <td colspan = "2" > <button onclick = "zero();" class = "zero"> 0 </button> </td>
+    <td> <button onclick = "decimal();"> . </button> </td>
+    <td> <button onclick = "equals();"> = </button> </td>
+    </tr>
+
+</tbody>
+  </table>
+</form>
   </body>
 </html>
