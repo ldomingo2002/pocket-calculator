@@ -9,6 +9,7 @@ function percentage(){
 }
 
 function division(){
+  let p = document.getElementById('display').innerHTML = "/"
 }
 
 function seven(){
@@ -20,10 +21,12 @@ function eight(){
 }
 
 function nine(){
-    let p = document.getElementById('display').innerHTML = "9";
+    let p = document.getElementById('display')
+    p.innerHTML = "9";
 }
 
 function multiplication(){
+  let p = document.getElementById('display').innerHTML = "x"
 }
 
 function four(){
@@ -39,6 +42,7 @@ function six(){
 }
 
 function subtraction(){
+  let p = document.getElementById('display')
 }
 
 function one(){
@@ -54,6 +58,7 @@ function three(){
 }
 
 function addition(){
+  let p = document.getElementById('display')
 }
 
 function zero(){
@@ -61,7 +66,9 @@ function zero(){
 }
 
 function decimal(){
+  let p = document.getElementById('display')
 }
 
 function equals(){
+  let p = document.getElementById('display')
 }

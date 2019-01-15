@@ -1,4 +1,31 @@
 button{
-height: 20em;
-width: 20em;
+height: 5em;
+width: 5em;
+border-radius: 5px;
+margin: 3px 3px 3px 3px;
+}
+
+button:hover{
+
+  -webkit-box-shadow: 3px 3px 6px 1px #777777;
+}
+
+.zero{
+  width: 10.8em
+}
+
+.calc{
+margin-left: 500px;
+margin-right: 534px;
+margin-top: 100px;
+border-style: solid;
+}
+
+
+#display{
+  height: 70px;
+  width: 285px;
+  padding-right: 15px;
+  padding-top: 15px;
+  text-align: center;
 }
