@@ -13,6 +13,11 @@
 <body>
 
 <style>
+
+ /*body{
+  background-image: url(https://images.wallpaperscraft.com/image/ocean_surf_foam_sea_water_117846_3840x2400.jpg);
+  background-size: 100%; */
+}
 button{
 height: 5em;
 width: 5em;
@@ -20,9 +25,9 @@ border-radius: 5px;
 margin: 3px 3px 3px 3px;
 }
 
-button:hover{
+.num:hover{
 
-  -webkit-box-shadow: 3px 3px 6px 1px #777777;
+  -webkit-box-shadow: 3px 3px 6px 1px grey;
 }
 
 
@@ -33,7 +38,10 @@ button:hover{
   margin: 3px 3px 3px 3px;
 }
 .zero{
-  width: 10.8em
+  width: 10.8em;
+  height: 5em;
+  border-radius: 5px;
+  margin: 3px 3px 3px 3px;
 }
 
 .calc{
@@ -54,46 +62,44 @@ width: 310px;
 }
 </style>
 
-<form class = "calc">
+<form class = "calc" name = "calculator">
 <table>
 <tbody>
   <tr>
-    <td colspan = "4"> <input id = "display" type ="text" value = "0" disabled> </input> </td>
+    <td colspan = "4"> <input id = "display" type = "display" value = "0" name = "txt" disabled> </input> </td>
 
     <tr>
-    <td> <button onclick = "ac();"> AC </button> </td>
-    <td> <button onclick = "negation();"> +/- </button> </td>
-    <td> <button onclick = "percentage();"> % </button> </td>
-    <td> <input class = "num" type = "button" onclick = "/" value = "/"> </input> </td>
+    <td> <input class = "num" type = "button" onclick = "0" value = "AC"> </td>
+    <td> <input class = "num" type = "button" onclick = "+/-" value = +/- > </td>
+    <td> <input class = "num" type = "button" onclick = "%" value = % > </td>
+    <td> <input class = "num" type = "button" onclick = "division()" value = "/"> </input> </td>
     </tr>
 
     <tr>
-    <td> <input  class = "num" type = "button" onclick = 7 value = 7> </input> </td>
-    <td> <input  class = "num" type = "button" onclick = 8 value = 8> </input> </td>
-    <td> <input  class = "num" type = "button" onclick = "9" value = 9> </input> </td>
-    <td> <input  class = "num" type = "button" onclick = "x" value = x> </input> </td>
+    <td> <input  class = "num" type = "button" value = "7" onclick = "calculator.txt.value += '7'"> </input> </td>
+    <td> <input  class = "num" type = "button" value = "8" onclick = "calculator.txt.value += '8'" > </input> </td>
+    <td> <input  class = "num" type = "button" onclick = "nine();" value = 9> </input> </td>
+    <td> <input  class = "num" type = "button" onclick = "multiplication();" value = x > </input> </td>
     </tr>
 
     <tr>
     <td> <input class = "num" type = "button" onclick = "4" value = 4> </input> </td>
-    <td> <input class = "num" type = "button" onclick = "5" value = 5> </input></button> </td>
-    <td> <input class = "num" type = "button" onclick = "6" value = 6> </td>
-    <td> <input class = "num" type = "button" onclick = "7" value = 7></td>
+    <td> <input class = "num" type = "button" onclick = "5" value = 5> </input></td>
+    <td> <input class = "num" type = "button" onclick = "6" value = 6> </input> </td>
+    <td> <input class = "num" type = "button" onclick = "7" value = 7> </input></td>
     </tr>
 
     <tr>
     <td><input class = "num" type = "button" onclick = "1" value = 1></td>
-    <td> <input class = "num" type = "button" onclick = "2" value = 2> </td>
-
-    <td> <button> <input class = "num" type = "number" onclick = "6" value = 6> </button></td>
-
-    <td> <button onclick = "addition();"> + </button> </td>
+    <td><input class = "num" type = "button" onclick = "2" value = 2> </td>
+    <td><input class = "num" type = "button" onclick = "3" value = 3></td>
+    <td> <input  class = "num" type = "button" onclick = "+" value = + > </td>
     </tr>
 
     <tr>
-    <td colspan = "2" > <button onclick = "zero();" class = "zero"> 0 </button> </td>
-    <td> <button onclick = "decimal();"> . </button> </td>
-    <td> <button onclick = "equals();"> = </button> </td>
+    <td colspan = "2" >  <input class = "zero" type = "button" onclick = "0" value = 0 > </td>
+    <td>  <input  class = "num" type = "button" onclick = "." value = . > </td>
+    <td> <input  class = "num" type = "button" onclick = "=" value = "=" > </td>
     </tr>
 
 </tbody>
