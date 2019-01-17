@@ -45,7 +45,9 @@ margin: 3px 3px 3px 3px;
 }
 
 .calc{
-margin: auto;
+margin-left: auto;
+margin-right: auto;
+margin-top: 150px;
 border-style: solid;
 width: 310px;
 }
@@ -61,6 +63,17 @@ width: 310px;
 
 }
 </style>
+
+<script>
+
+function equals(){
+
+let p = document.getElementById('display');
+
+
+}
+
+</script>
 
 <form class = "calc" name = "calculator">
 <table>
@@ -79,21 +92,27 @@ width: 310px;
     <td> <input  class = "num" type = "button" value = "7" onclick = "calculator.txt.value += '7'"> </input> </td>
     <td> <input  class = "num" type = "button" value = "8" onclick = "calculator.txt.value += '8'" > </input> </td>
     <td> <input  class = "num" type = "button" value = "9" onclick = "calculator.txt.value += '9'" > </input> </td>
+
     <td> <input  class = "num" type = "button" value = "x" onclick = "calculator.txt.value += 'x'"> </input> </td>
+
     </tr>
 
     <tr>
     <td> <input class = "num" type = "button" value = "4" onclick = "calculator.txt.value += '4'"> </input> </td>
     <td> <input class = "num" type = "button" value = "5" onclick = "calculator.txt.value += '5'"> </input></td>
     <td> <input class = "num" type = "button" value = "6" onclick = "calculator.txt.value += '6'"> </input> </td>
+
     <td> <input class = "num" type = "button" value = "-" onclick = "calculator.txt.value += '-'"> </input></td>
+
     </tr>
 
     <tr>
     <td> <input class = "num" type = "button" value = 1 onclick = "calculator.txt.value += '1'"> </input></td>
     <td> <input class = "num" type = "button" value = 2 onclick = "calculator.txt.value += '2'"> </input></td>
     <td> <input class = "num" type = "button" value = 3 onclick = "calculator.txt.value += '3'"> </input></td>
-    <td> <input class = "num" type = "button" value = "+" onclick = "calculator.txt.value += '+'"> </td>
+
+    <td> <input class = "num" type = "button" value = "+" onclick = "calculator.txt.value = '+'"> </td>
+
     </tr>
 
     <tr>
