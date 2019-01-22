@@ -14,9 +14,9 @@
 
 <style>
 
- /*body{
+ body{
   background-image: url(https://images.wallpaperscraft.com/image/ocean_surf_foam_sea_water_117846_3840x2400.jpg);
-  background-size: 100%; */
+  background-size: 110%;
 }
 button{
 height: 5em;
@@ -26,7 +26,6 @@ margin: 3px 3px 3px 3px;
 }
 
 .num:hover{
-
   -webkit-box-shadow: 3px 3px 6px 1px grey;
 }
 
@@ -36,12 +35,14 @@ margin: 3px 3px 3px 3px;
   width: 5em;
   border-radius: 5px;
   margin: 3px 3px 3px 3px;
+  opacity: 0.75;
 }
 .zero{
   width: 10.8em;
   height: 5em;
   border-radius: 5px;
   margin: 3px 3px 3px 3px;
+  opacity: 0.75;
 }
 
 .calc{
@@ -49,6 +50,7 @@ margin-left: auto;
 margin-right: auto;
 margin-top: 150px;
 border-style: solid;
+border-color: LightSeaGreen;
 width: 310px;
 }
 
@@ -60,20 +62,33 @@ width: 310px;
   padding-top: 15px;
   text-align: right;
   font-size: 34px;
+  opacity: 0.75;
 
 }
 </style>
 
 <script>
 
-function equals(){
+function comma(){
 
-let p = document.getElementById('display');
+let p = document.getElementsByClassName('display').value;
 
+if (p.length >= 4){
+
+}
+}
+
+function negation(){
+  let p = document.getElementById('display');
+  let num = p * (-1);
+  p.innerHTML = `${num}`;
 
 }
 
+
+
 </script>
+
 
 <form class = "calc" name = "calculator">
 <table>
@@ -83,7 +98,7 @@ let p = document.getElementById('display');
 
     <tr>
     <td> <input class = "num" type = "button" value = AC placeholder = "0" onclick = "calculator.txt.value = ''"> </td>
-    <td> <input class = "num" type = "button" value = +/- onclick = "calculator.txt.value += '+/-'" > </td>
+    <td> <input class = "num" type = "button" value = +/- onclick = "negation();"> </td>
     <td> <input class = "num" type = "button" value = "%" onclick = "calculator.txt.value += '%'" > </td>
     <td> <input class = "num" type = "button" value = "/" onclick = "calculator.txt.value += "/"" > </input> </td>
     </tr>
@@ -93,7 +108,7 @@ let p = document.getElementById('display');
     <td> <input  class = "num" type = "button" value = "8" onclick = "calculator.txt.value += '8'" > </input> </td>
     <td> <input  class = "num" type = "button" value = "9" onclick = "calculator.txt.value += '9'" > </input> </td>
 
-    <td> <input  class = "num" type = "button" value = "x" onclick = "calculator.txt.value += 'x'"> </input> </td>
+    <td> <input  class = "num" type = "button" value = "x" onclick = "calculator.txt.value += '*'"> </input> </td>
 
     </tr>
 
@@ -111,14 +126,14 @@ let p = document.getElementById('display');
     <td> <input class = "num" type = "button" value = 2 onclick = "calculator.txt.value += '2'"> </input></td>
     <td> <input class = "num" type = "button" value = 3 onclick = "calculator.txt.value += '3'"> </input></td>
 
-    <td> <input class = "num" type = "button" value = "+" onclick = "calculator.txt.value = '+'"> </td>
+    <td> <input class = "num" type = "button" value = "+" onclick = "calculator.txt.value += '+'"> </td>
 
     </tr>
 
     <tr>
-    <td colspan = "2"> <input class = "zero" type = "button" value = 0 onclick = "calculator.txt.value += '7'"> </input> </td>
+    <td colspan = "2"> <input class = "zero" type = "button" value = 0 onclick = "calculator.txt.value += '0'"> </input> </td>
     <td> <input class = "num" type = "button" value = "." onclick = "calculator.txt.value += '.'"> </input> </td>
-    <td> <input class = "num" type = "button" value = "=" onclick = "equals();" </input> </td>
+    <td> <input class = "num" type = "button" value = "=" onclick = "eval(calculator.txt.value)" </input> </td>
     </tr>
 
 </tbody>
