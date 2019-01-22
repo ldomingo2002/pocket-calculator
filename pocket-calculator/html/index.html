@@ -79,13 +79,8 @@ if (p.length >= 4){
 }
 
 function negation(){
-  let p = document.getElementById('display');
-  let num = p * (-1);
-  p.innerHTML = `${num}`;
-
+  let p = document.getElementById('display').innerHTML = "Calculator";
 }
-
-
 
 </script>
 
@@ -94,13 +89,14 @@ function negation(){
 <table>
 <tbody>
   <tr>
-    <td colspan = "4"> <input id = "display" type = "display" placeholder = "0" name = "txt" disabled> </input> </td>
+    <td colspan = "4"> <input id = "display" type = "text" placeholder = "0" name = "txt" disabled> </input> </td>
+  </tr>
 
     <tr>
     <td> <input class = "num" type = "button" value = AC placeholder = "0" onclick = "calculator.txt.value = ''"> </td>
-    <td> <input class = "num" type = "button" value = +/- onclick = "negation();"> </td>
+    <td> <input class = "num" type = "button" value = +/- onclick = "calculator.txt.value = '+/-'"> </td>
     <td> <input class = "num" type = "button" value = "%" onclick = "calculator.txt.value += '%'" > </td>
-    <td> <input class = "num" type = "button" value = "/" onclick = "calculator.txt.value += "/"" > </input> </td>
+    <td> <input class = "num" type = "button" value = "/" onclick = "calculator.txt.value += '/'"> </td>
     </tr>
 
     <tr>
@@ -133,7 +129,7 @@ function negation(){
     <tr>
     <td colspan = "2"> <input class = "zero" type = "button" value = 0 onclick = "calculator.txt.value += '0'"> </input> </td>
     <td> <input class = "num" type = "button" value = "." onclick = "calculator.txt.value += '.'"> </input> </td>
-    <td> <input class = "num" type = "button" value = "=" onclick = "eval(calculator.txt.value)" </input> </td>
+    <td> <input class = "num" type = "button" value = "=" onclick = "eval(txt.value)" </input> </td>
     </tr>
 
 </tbody>
