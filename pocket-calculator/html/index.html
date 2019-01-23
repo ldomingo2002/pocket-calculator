@@ -4,33 +4,18 @@
 <head>
   <title> Calculator </title>
 
-  <link rel="stylesheet" type="text/css" href="pocket.css">
-
-  <script type="text/javascript" src="calc.js"></script>
+  <link rel="shortcut icon" type="image/png" href="http://icons.iconarchive.com/icons/dtafalonso/android-l/256/Calculator-icon.png">
 
 </head>
 
 <body>
 
 <style>
-<<<<<<< HEAD
  body{
   background-image: url(https://images.wallpaperscraft.com/image/ocean_surf_foam_sea_water_117846_3840x2400.jpg);
   background-size: 100%;
-=======
-
- body{
-  background-image: url(https://images.wallpaperscraft.com/image/ocean_surf_foam_sea_water_117846_3840x2400.jpg);
-  background-size: 110%;
->>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
 }
 
-button{
-height: 5em;
-width: 5em;
-border-radius: 5px;
-margin: 3px 3px 3px 3px;
-}
 .num:hover{
   -webkit-box-shadow: 3px 3px 6px 1px grey;
 }
@@ -40,7 +25,7 @@ margin: 3px 3px 3px 3px;
   width: 5em;
   border-radius: 5px;
   margin: 3px 3px 3px 3px;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 .zero{
@@ -48,18 +33,14 @@ margin: 3px 3px 3px 3px;
   height: 5em;
   border-radius: 5px;
   margin: 3px 3px 3px 3px;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 .calc{
 margin: auto;
 margin-top: 90px;
 border-style: solid;
-<<<<<<< HEAD
 border-color: SteelBlue;
-=======
-border-color: LightSeaGreen;
->>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
 width: 310px;
 }
 
@@ -71,104 +52,68 @@ width: 310px;
   text-align: right;
   font-size: 34px;
   opacity: 0.75;
-<<<<<<< HEAD
+}
+
+#special{
+  background-color: SteelBlue;
+  border-color: SteelBlue;
+  opacity: 0.9;
 }
 </style>
 
 
 <script>
-=======
 
-}
-</style>
 
-<script>
-
-function comma(){
-
-let p = document.getElementsByClassName('display').value;
-
-if (p.length >= 4){
->>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
-
-function print(num){
-let p = getElementById('display').innerHTML = getNumber(num);
-}
+function printDisplay(num){
+  document.getElementById('display').innerHTML = getFormattedNumber(num);
 }
 
-function negation(){
-  let p = document.getElementById('display').innerHTML = "Calculator";
-}
-
-function getNumber(num){
+function getFormattedNumber(num){
   var n = Number(num);
   var value = n.toLocaleString("en");
   return value;
 }
 </script>
 
-
 <form class = "calc" name = "calculator">
 <table>
 <tbody>
   <tr>
-<<<<<<< HEAD
     <td colspan = "4"> <input id = "display" type = "display" placeholder = "0" name = "txt" disabled> </input></td>
-=======
-    <td colspan = "4"> <input id = "display" type = "text" placeholder = "0" name = "txt" disabled> </input> </td>
-  </tr>
->>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
 
     <tr>
     <td> <input class = "num" type = "button" value = AC placeholder = "0" onclick = "calculator.txt.value = ''"> </td>
-    <td> <input class = "num" type = "button" value = +/- onclick = "calculator.txt.value = '+/-'"> </td>
-    <td> <input class = "num" type = "button" value = "%" onclick = "calculator.txt.value += '%'" > </td>
-<<<<<<< HEAD
-    <td> <input class = "num" type = "button" value = "/" onclick = "calculator.txt.value += '/'"> </input> </td>
-=======
-    <td> <input class = "num" type = "button" value = "/" onclick = "calculator.txt.value += '/'"> </td>
->>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
+    <td> <input class = "num" type = "button" value = +/- onclick = "calculator.txt.value += '+/-'" > </td>
+    <td> <input class = "num" type = "button" value = "%" onclick = "calculator.txt.value += '%'"> </td>
+    <td> <input id = "special" class = "num" type = "button" value = "/" onclick = "calculator.txt.value += '/'"> </input> </td>
     </tr>
 
     <tr>
-    <td> <input  class = "num" type = "button" value = "7" onclick = "calculator.txt.value += 7"> </input> </td>
-    <td> <input  class = "num" type = "button" value = "8" onclick = "calculator.txt.value += 8" > </input> </td>
-    <td> <input  class = "num" type = "button" value = "9" onclick = "calculator.txt.value += 9" > </input> </td>
-
-    <td> <input  class = "num" type = "button" value = "x" onclick = "calculator.txt.value += '*'"> </input> </td>
-
+    <td> <input class = "num" type = "button" value = "7" onclick = "calculator.txt.value += 7"> </input> </td>
+    <td> <input class = "num" type = "button" value = "8" onclick = "calculator.txt.value += 8" > </input> </td>
+    <td> <input class = "num" type = "button" value = "9" onclick = "calculator.txt.value += 9" > </input> </td>
+    <td> <input id = "special" class = "num" type = "button" value = "x" onclick = "calculator.txt.value += '*'"> </input> </td>
     </tr>
 
     <tr>
     <td> <input class = "num" type = "button" value = "4" onclick = "calculator.txt.value += '4'"> </input> </td>
     <td> <input class = "num" type = "button" value = "5" onclick = "calculator.txt.value += '5'"> </input></td>
     <td> <input class = "num" type = "button" value = "6" onclick = "calculator.txt.value += '6'"> </input> </td>
-
-    <td> <input class = "num" type = "button" value = "-" onclick = "calculator.txt.value += '-'"> </input></td>
-
+    <td> <input id = "special" class = "num" type = "button" value = "-" onclick = "calculator.txt.value += '-'"> </input></td>
     </tr>
 
     <tr>
     <td> <input class = "num" type = "button" value = 1 onclick = "calculator.txt.value += '1'"> </input></td>
     <td> <input class = "num" type = "button" value = 2 onclick = "calculator.txt.value += '2'"> </input></td>
     <td> <input class = "num" type = "button" value = 3 onclick = "calculator.txt.value += '3'"> </input></td>
-
-<<<<<<< HEAD
-    <td> <input class = "num" type = "button" value = "+" onclick = "calculator.txt.value += '+'" placeholder="+"> </td>
-=======
-    <td> <input class = "num" type = "button" value = "+" onclick = "calculator.txt.value += '+'"> </td>
->>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
-
+    <td> <input id = "special" class = "num" type = "button" value = "+" onclick = "calculator.txt.value += '+'" placeholder="+"> </td>
     </tr>
 
     <tr>
     <td colspan = "2"> <input class = "zero" type = "button" value = 0 onclick = "calculator.txt.value += '0'"> </input> </td>
     <td> <input class = "num" type = "button" value = "." onclick = "calculator.txt.value += '.'"> </input> </td>
-<<<<<<< HEAD
-    <td> <input class = "num" type = "button" value = "=" onclick = "calculator.txt.value = eval(calculator.txt.value)" </input> </td>
-=======
-    <td> <input class = "num" type = "button" value = "=" onclick = "eval(txt.value)" </input> </td>
->>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
+    <td> <input id = "special" class = "num" type = "button" value = "=" onclick = "calculator.txt.value = eval(calculator.txt.value)" </input> </td>
     </tr>
 
 </tbody>
