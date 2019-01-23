@@ -13,9 +13,16 @@
 <body>
 
 <style>
+<<<<<<< HEAD
  body{
   background-image: url(https://images.wallpaperscraft.com/image/ocean_surf_foam_sea_water_117846_3840x2400.jpg);
   background-size: 100%;
+=======
+
+ body{
+  background-image: url(https://images.wallpaperscraft.com/image/ocean_surf_foam_sea_water_117846_3840x2400.jpg);
+  background-size: 110%;
+>>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
 }
 
 button{
@@ -48,7 +55,11 @@ margin: 3px 3px 3px 3px;
 margin: auto;
 margin-top: 90px;
 border-style: solid;
+<<<<<<< HEAD
 border-color: SteelBlue;
+=======
+border-color: LightSeaGreen;
+>>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
 width: 310px;
 }
 
@@ -60,14 +71,33 @@ width: 310px;
   text-align: right;
   font-size: 34px;
   opacity: 0.75;
+<<<<<<< HEAD
 }
 </style>
 
 
 <script>
+=======
+
+}
+</style>
+
+<script>
+
+function comma(){
+
+let p = document.getElementsByClassName('display').value;
+
+if (p.length >= 4){
+>>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
 
 function print(num){
 let p = getElementById('display').innerHTML = getNumber(num);
+}
+}
+
+function negation(){
+  let p = document.getElementById('display').innerHTML = "Calculator";
 }
 
 function getNumber(num){
@@ -77,17 +107,27 @@ function getNumber(num){
 }
 </script>
 
+
 <form class = "calc" name = "calculator">
 <table>
 <tbody>
   <tr>
+<<<<<<< HEAD
     <td colspan = "4"> <input id = "display" type = "display" placeholder = "0" name = "txt" disabled> </input></td>
+=======
+    <td colspan = "4"> <input id = "display" type = "text" placeholder = "0" name = "txt" disabled> </input> </td>
+  </tr>
+>>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
 
     <tr>
     <td> <input class = "num" type = "button" value = AC placeholder = "0" onclick = "calculator.txt.value = ''"> </td>
-    <td> <input class = "num" type = "button" value = +/- onclick = "calculator.txt.value += '+/-'" > </td>
+    <td> <input class = "num" type = "button" value = +/- onclick = "calculator.txt.value = '+/-'"> </td>
     <td> <input class = "num" type = "button" value = "%" onclick = "calculator.txt.value += '%'" > </td>
+<<<<<<< HEAD
     <td> <input class = "num" type = "button" value = "/" onclick = "calculator.txt.value += '/'"> </input> </td>
+=======
+    <td> <input class = "num" type = "button" value = "/" onclick = "calculator.txt.value += '/'"> </td>
+>>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
     </tr>
 
     <tr>
@@ -113,14 +153,22 @@ function getNumber(num){
     <td> <input class = "num" type = "button" value = 2 onclick = "calculator.txt.value += '2'"> </input></td>
     <td> <input class = "num" type = "button" value = 3 onclick = "calculator.txt.value += '3'"> </input></td>
 
+<<<<<<< HEAD
     <td> <input class = "num" type = "button" value = "+" onclick = "calculator.txt.value += '+'" placeholder="+"> </td>
+=======
+    <td> <input class = "num" type = "button" value = "+" onclick = "calculator.txt.value += '+'"> </td>
+>>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
 
     </tr>
 
     <tr>
     <td colspan = "2"> <input class = "zero" type = "button" value = 0 onclick = "calculator.txt.value += '0'"> </input> </td>
     <td> <input class = "num" type = "button" value = "." onclick = "calculator.txt.value += '.'"> </input> </td>
+<<<<<<< HEAD
     <td> <input class = "num" type = "button" value = "=" onclick = "calculator.txt.value = eval(calculator.txt.value)" </input> </td>
+=======
+    <td> <input class = "num" type = "button" value = "=" onclick = "eval(txt.value)" </input> </td>
+>>>>>>> 813a3dc20edfe5e95cda6644acfdf747fe06842a
     </tr>
 
 </tbody>
